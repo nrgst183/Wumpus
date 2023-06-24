@@ -1,0 +1,103 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B77ECAD3-CFEE-4D90-9D9D-31F58C52B644}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>wumpuslibtest</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Arrow.cs" />
+    <Compile Include="Entities\BottomlessPit.cs" />
+    <Compile Include="Entities\Enemy.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Events\EntityDeployArgs.cs" />
+    <Compile Include="Entities\Events\EntityDiedArgs.cs" />
+    <Compile Include="Entities\Events\EntityMovedArgs.cs" />
+    <Compile Include="Entities\Events\EntityMovedByEntityArgs.cs" />
+    <Compile Include="Entities\Events\EntityUpdateArgs.cs" />
+    <Compile Include="Entities\Flag.cs" />
+    <Compile Include="Entities\GameMapAccessor.cs" />
+    <Compile Include="Entities\Hazard.cs" />
+    <Compile Include="Entities\Inventory.cs" />
+    <Compile Include="Entities\Movable.cs" />
+    <Compile Include="Entities\Player\Bot\BotAttributes.cs" />
+    <Compile Include="Entities\Player\Bot\BotPlayer.cs" />
+    <Compile Include="Entities\Player\Bot\BotSkillLevel.cs" />
+    <Compile Include="Entities\Player\Player.cs" />
+    <Compile Include="Entities\Player\PlayerAction.cs" />
+    <Compile Include="Entities\Player\PlayerActionType.cs" />
+    <Compile Include="Entities\SuperBats.cs" />
+    <Compile Include="Entities\Wumpus.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="GameModes\ClassicGameMode.cs" />
+    <Compile Include="GameModes\DeathmatchGameMode.cs" />
+    <Compile Include="GameModes\DuelGameMode.cs" />
+    <Compile Include="GameModes\EntityLifeSettings.cs" />
+    <Compile Include="GameModes\GameMode.cs" />
+    <Compile Include="GameModes\GameModeOptions.cs" />
+    <Compile Include="GameModes\HeadhunterGameMode.cs" />
+    <Compile Include="GameModes\Team.cs" />
+    <Compile Include="GameModes\TeamColor.cs" />
+    <Compile Include="GameModes\TeamHeadhunterGameMode.cs" />
+    <Compile Include="Game\EntityKillInformation.cs" />
+    <Compile Include="Game\GameTextString.cs" />
+    <Compile Include="Game\GlobalEntityAttributes.cs" />
+    <Compile Include="Game\WumpusGame.cs" />
+    <Compile Include="Map\Dodecahedron.cs" />
+    <Compile Include="Map\EntitySpawnParameters.cs" />
+    <Compile Include="Map\Events\GameMapUpdateArgs.cs" />
+    <Compile Include="Map\GameMap.cs" />
+    <Compile Include="Map\MobiusStripGameMap.cs" />
+    <Compile Include="Map\NearbyEntitySenseInfo.cs" />
+    <Compile Include="Map\Results\AddPlayerResult.cs" />
+    <Compile Include="Map\Results\EquipResult.cs" />
+    <Compile Include="Map\Results\LinkResult.cs" />
+    <Compile Include="Map\Results\MoveResult.cs" />
+    <Compile Include="Map\Results\RemoveResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\wumpuslibtest\v17\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
